@@ -29,7 +29,7 @@ class _MyHomePageState extends State<MyHomePage> {
    var ftController = TextEditingController();
    var inController = TextEditingController();
    var result ="";
-   var bgColor = Colors.indigo.shade200;
+   var bgColor = Colors.redAccent.shade200;
    var bmi ="";
 
   @override
@@ -40,7 +40,17 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text('your BMI'),
       ),
       body: Container(
-        color: bgColor,
+       decoration: BoxDecoration(
+         gradient: LinearGradient(
+           colors: [
+             Color(0xffa6c0fe),Color(0xfff68084),
+           ],
+               begin: FractionalOffset(1.0,0.0),
+               end: FractionalOffset(0.0, 1.0),
+           stops: [0.5,1.0]
+
+         )
+       ),
         child: Center(
           child: Container(
             width: 300,
